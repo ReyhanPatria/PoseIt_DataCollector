@@ -31,7 +31,7 @@ function setup() {
 	classifiedPoseElement = createElement("p");
 	classifiedPoseElement.style("text-align", "center");
 	classifiedPoseElement.style("font-size", "30px");
-	classifiedPoseElement.html("Hellp");
+	classifiedPoseElement.html("Pose");
 	classifiedPoseElement.hide();
 
 	poseNameInput = createInput("Pose Name");
@@ -169,4 +169,8 @@ function getClassifiedPose(error, result) {
 	console.log(result[0].label);
 
 	classifiedPoseElement.html(result[0].label);
+}
+
+function windowResized() {
+	resizeCanvas(windowWidth, 500);
 }
