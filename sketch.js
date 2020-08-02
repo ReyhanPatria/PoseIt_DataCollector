@@ -77,12 +77,12 @@ function draw() {
 
 	if(pose) {
 		for(let i in pose) {
-			if(pose[i].confidence > 0.90) {
+// 			if(pose[i].confidence > 0.90) {
 				let x = pose[i].x + webcamX;
 				let y = pose[i].y;
 
 				ellipse(x, y, 10);
-			}
+// 			}
 		}
 	}
 }
